@@ -1,0 +1,38 @@
+h1{
+    font-size:60px;
+    margin-bottom: 100px;
+}
+
+li{
+
+    margin-left: 45vh;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+
+
+
+#home:hover{
+    background-color: rgb(62, 152, 141);
+    border: 0px solid black;
+    border-radius: 10px;
+    width: 50px;
+}
+
+#home{
+    display: block;
+    margin-left: 12px;
+    margin-top: 63vh;
+    margin-bottom: 0px;
+    text-align: left;
+    
+
+}
+
+  @media screen and (max-width: 401px) {
+          #home {
+            font-size: 16px;
+            margin-top: 131px;
+          }
+        }
