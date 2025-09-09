@@ -1,0 +1,20 @@
+h1 {
+    font-size: 60px;
+    font-weight: 780;
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+.items {
+    text-align: left;
+    margin: 10px;
+}
+.todo-container{
+    border : 2px solid black ;
+    margin :10px;
+    width :700px;
+    padding: 10px;
+}
+.my-button {
+    min-width: 80px;
+}
