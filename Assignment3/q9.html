@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Count</title>
+</head>
+<body>
+  <h2>Word Counter</h2>
+  <textarea id="paragraph" rows="6" cols="50" placeholder="Enter your paragraph here..."></textarea>
+  <br>
+  <button onclick="countWords()">Count Words</button>
+  <p>Word count: <span id="wordCount">0</span></p>
+
+  <script>
+    function countWords() {
+      const paragraph = document.getElementById('paragraph').value;
+      // Split based on whitespace, filter out empty strings
+      const words = paragraph.trim().split(/[\s,]+/).filter(word => word.length > 0);
+      // Display the word count
+      document.getElementById('wordCount').textContent = words.length;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Average Scores</title>
+</head>
+<body>
+  <h2>Student Average Scores</h2>
+  <pre id="output"></pre>
+
+  <script>
+    const students = {
+      student1: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 },
+      student2: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 },
+      student3: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 }
+    };
+
+    const result = {};
+
+    // Calculate and store average for each student
+    Object.keys(students).forEach(student => {
+      const scores = Object.values(students[student]);
+      const average = scores.reduce((sum, val) => sum + val, 0) / scores.length;
+      result[student] = { average: average };
+    });
+
+    // Display the result in formatted JSON in the <pre> element
+    document.getElementById('output').textContent = JSON.stringify(result, null, 2);
+  </script>
+</body>
+</html>

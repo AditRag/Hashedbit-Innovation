@@ -1,0 +1,38 @@
+<!-- Q10) Write a function to reverse a string.
+          Input - Hello
+        Outpur - olleH -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse a string</title>
+</head>
+<body>
+    <input type="text" id="string">
+    <button onclick="Rev()">Reverse</button>
+
+    <script>
+       let click = 0;
+        function Rev(){
+            if(click>0){
+            const get_box = document.getElementById("newrev");
+            if(get_box) get_box.remove();
+            }
+            
+            const string = document.getElementById("string").value;
+            const reversed = string.split("").reverse().join("");
+            let str_rev = document.createElement("input");
+            str_rev.setAttribute('type', 'text');
+            str_rev.setAttribute('id', 'newrev');
+            str_rev.value = reversed;
+            document.body.appendChild(str_rev);
+            console.log(reversed);
+            click++;
+        }
+    </script>
+</body>
+</html>
+
